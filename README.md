@@ -1,1 +1,6 @@
-# fada
+# Miniproyecto FADA
+
+#### Integrantes
+*
+*
+*
