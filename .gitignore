@@ -2,3 +2,5 @@ tags
 *.aux
 *.log
 *.gz
+*.fdb_latexmk
+*.fls
