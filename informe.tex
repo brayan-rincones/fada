@@ -11,12 +11,22 @@
 
 	\section{Soluciones Planteadas}
 		\textbf{Idea General de la solución:}\\
-		Almacenar los animales y sus grandezas en una estructura de datos que almacene tuplas llave:valor, de la forma:
-		\texttt{[...(animal:grandeza)...]}, se ordena este arreglo/lista de acuerdo a los valores de cada tupla allí
-		almacenada y se utiliza para armar las escenas de todas las partes del evento.\\
-		
-		Para calcular la apertura se realiza un primer ciclo for que se ejecutará $(m-1)*k$ veces, en cada ciclo se calcula
+		Almacenar los animales y sus grandezas en una estructura de datos tipo lista, arreglo o diccionario, 
+		se ordena esta estructura de acuerdo a los valores de las grandezas y se guarda utiliza para armar las
+		escenas de todas las partes del evento.\\	
+		Para calcular la apertura se realiza un primer ciclo for que se ejecutará $(m-1)*k$ veces, iniciando en $i=1$, en cada ciclo se calcula
 		una escena para la apertura así:
+		\begin{center}
+			\texttt{escena = [ animales[i], animales[i+1], animales[i+2] ]} \\
+			ó\\	
+			\texttt{escena = [ animales[n], animales[n-1], animales[n-2] ]}\\
+			Dependiendo de sí \texttt{animales} se ordeno ascendentemente o descendentemente.
+		\end{center}
+		Luego, se añade la escena recién calculada al arreglo \texttt{apertura}, que va a contener todas las escenas de la apertura
+		y que por consiguiente también se usarán en las partes posteriores. Luego de que \texttt{apertura} este lleno (o mientras se esté llenando)
+		se deben buscar posibles empates y resolverlos. Para calcular las demás partes se sigue un proceso similar.\\
+		La forma en que se van a calcular los datos que requiere el gerente del zoológico son particulares de cada solución.
+
 		
 		\subsection{$O(n^2)$}
 			\textbf{Idea de la solución:}\\
@@ -29,8 +39,8 @@
 			\textbf{Lenguaje en el que se implementó:}
 		\subsection{$O(n)$}
 			\textbf{Idea de la solución:}\\	
-			\textbf{Estructuras de datos utilizadas:} \\
-			\textbf{Lenguaje en el que se implementó:}
+			\textbf{Estructuras de datos utilizadas:} Diccionarios y listas.\\
+			\textbf{Lenguaje en el que se implementó:} Python
 	\section{Análisis de Resultados}
 
 	\section{Instrucciones para la ejecución}
