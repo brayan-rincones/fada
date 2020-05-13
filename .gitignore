@@ -4,4 +4,4 @@ tags
 *.gz
 *.fdb_latexmk
 *.fls
-__pycache__/*
+soluciones/lineal/__pycache__/*
