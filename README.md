@@ -18,8 +18,8 @@ Se me ocurre que el formato de los archivos de entrada puede ser el siguiente:
 n
 m
 k
-{animales}
-{grandezas}
+[animales]
+[grandezas]
 parte1
 parte2
 ...
@@ -30,9 +30,9 @@ Por ejemplo
 6
 3
 2
-{"gato", "libelula", "ciempies", "nutria", "perro", "tapir"}
-{3, 2, 1, 6, 4, 5}
-{{"tapir", "nutria", "perro"}, {"tapir","perro", "gato"},{"ciempies", "tapir", "gato"},{"gato", "ciempies", "libelula"}}
-{{"tapir", "nutria", "perro"}, {"ciempies", "tapir", "gato"}}
-{{"gato", "ciempies", "libelula"}, {"tapir", "perro", "gato"}}
+["gato", "libelula", "ciempies", "nutria", "perro", "tapir"]
+[3, 2, 1, 6, 4, 5]
+[["tapir", "nutria", "perro"], ["tapir","perro", "gato"],["ciempies", "tapir", "gato"],["gato", "ciempies", "libelula"]]
+[["tapir", "nutria", "perro"], ["ciempies", "tapir", "gato"]]
+[["gato", "ciempies", "libelula"], ["tapir", "perro", "gato"]]
 ```
