@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import copy
+
 # Implementación de Counting Sort
 # Ordena una lista de tuplas en orden ascendente en O(n).
 # Cada tupla tiene la forma (llave:valor) valor es un entero de 0 a k

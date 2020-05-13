@@ -38,11 +38,22 @@
 			\textbf{Estructuras de datos utilizadas:} \\
 			\textbf{Lenguaje en el que se implementó:}
 		\subsection{$O(n)$}
-			\textbf{Idea de la solución:}\\	
-			\textbf{Estructuras de datos utilizadas:} Diccionarios y listas.\\
+			\textbf{Idea de la solución:} Después de recolectar los datos de entrada se construye una lista de tuplas a partir de la
+			lista de animales y grandezas, luego se ordena ascendentemente de acuerdo a los valores de cada tupla utilizando Counting Sort.
+			Para realizar el ordenamiento de escenas localmente, escenas y partes del evento se va a usar una aproximación \textit{top-down}
+			de la siguiente manera.
+				\begin{enumerate}
+					\item Calcular la grandeza de cada parte y almacenar estas grandezas en una lista auxiliar.
+					\item Armar una lista de tuplas, cada tupla de la forma: (parte:grandeza) y ordenar la lista con Counting Sort.
+					\item Para cada parte, armar otra lista de tuplas (escena:grandeza) y ordenar la lista con Counting Sort.
+					\item Realizar un procedimiento similar para las escenas de cada parte.
+				\end{enumerate}
+			\textbf{Estructuras de datos utilizadas:} Tuplas y listas.\\
 			\textbf{Lenguaje en el que se implementó:} Python
 	\section{Análisis de Resultados}
-
+		\subsection{$O(n^2)$}
+		\subsection{$O(n*\log(n))$}
+		\subsection{$O(n)$}
 	\section{Instrucciones para la ejecución}
 
 	\section{Sets de prueba}
