@@ -14,20 +14,6 @@
 		Almacenar los animales y sus grandezas en una estructura de datos tipo lista, arreglo o diccionario, 
 		se ordena esta estructura de acuerdo a los valores de las grandezas y se guarda utiliza para armar las
 		escenas de todas las partes del evento.\\	
-		Para calcular la apertura se realiza un primer ciclo for que se ejecutará $(m-1)*k$ veces, iniciando en $i=1$, en cada ciclo se calcula
-		una escena para la apertura así:
-		\begin{center}
-			\texttt{escena = [ animales[i], animales[i+1], animales[i+2] ]} \\
-			ó\\	
-			\texttt{escena = [ animales[n], animales[n-1], animales[n-2] ]}\\
-			Dependiendo de sí \texttt{animales} se ordeno ascendentemente o descendentemente.
-		\end{center}
-		Luego, se añade la escena recién calculada al arreglo \texttt{apertura}, que va a contener todas las escenas de la apertura
-		y que por consiguiente también se usarán en las partes posteriores. Luego de que \texttt{apertura} este lleno (o mientras se esté llenando)
-		se deben buscar posibles empates y resolverlos. Para calcular las demás partes se sigue un proceso similar.\\
-		La forma en que se van a calcular los datos que requiere el gerente del zoológico son particulares de cada solución.
-
-		
 		\subsection{$O(n^2)$}
 			\textbf{Idea de la solución:}\\
 			\textbf{Estructuras de datos utilizadas:} \\
@@ -40,14 +26,6 @@
 		\subsection{$O(n)$}
 			\textbf{Idea de la solución:} Después de recolectar los datos de entrada se construye una lista de tuplas a partir de la
 			lista de animales y grandezas, luego se ordena ascendentemente de acuerdo a los valores de cada tupla utilizando Counting Sort.
-			Para realizar el ordenamiento de escenas localmente, escenas y partes del evento se va a usar una aproximación \textit{top-down}
-			de la siguiente manera.
-				\begin{enumerate}
-					\item Calcular la grandeza de cada parte y almacenar estas grandezas en una lista auxiliar.
-					\item Armar una lista de tuplas, cada tupla de la forma: (parte:grandeza) y ordenar la lista con Counting Sort.
-					\item Para cada parte, armar otra lista de tuplas (escena:grandeza) y ordenar la lista con Counting Sort.
-					\item Realizar un procedimiento similar para las escenas de cada parte.
-				\end{enumerate}
 			\textbf{Estructuras de datos utilizadas:} Tuplas y listas.\\
 			\textbf{Lenguaje en el que se implementó:} Python
 	\section{Análisis de Resultados}
